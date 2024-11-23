@@ -1,0 +1,62 @@
+.home-button {
+    padding: 1em 2em;
+    border: none;
+    font-weight: 900;
+    outline: none;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+    border-radius: 1000px;
+}
+
+.home-button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 1000px;
+}
+
+.home-button::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00,#48FF00, 
+        #00FFD5, #0028FF, #FF00C8, #FF0000
+    );
+
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 1.5px);
+    height: calc(100% + 1.5px);
+    filter: blur(20px);
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.home-button:hover::before {
+    opacity: 1;
+}
+
+.home-button:active:after {
+    background: transparent;
+}
+
+.home-button:active {
+    color: #000;
+}
