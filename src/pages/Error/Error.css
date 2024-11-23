@@ -1,0 +1,17 @@
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 5px;
+}
+
+.error-page h3 {
+    margin-top: -20px;
+}
+
+.error-heading {
+  margin-top: 20px;
+}
+  

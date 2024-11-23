@@ -1,10 +1,11 @@
-import Button from './components/Button/Button';
+import Button from '../../components/Button/Button';
 import './Home.css';
+import GradientText from '../../components/GradientText/GradientText';
 
 export default function Home() {
   return (
     <div className="home-page">
-      <h1 className="home-heading">UnoZone</h1>
+      <GradientText fontSize={42} text="UnoZone" />
       <div className="home-card-deck">
         <img
           className="home-wild-card"
@@ -23,10 +24,10 @@ export default function Home() {
         />
       </div>
       <p className="home-intro">
-        A multiplayer web platform which allows you to
-        connect with players around the world and play a match of UNO!
+        A multiplayer web platform which allows you to connect with players
+        around the world and play a match of UNO!
       </p>
-      <Button />
+      <Button text="Play Now" fetchPath="http://localhost:8080/api/random-id" />
     </div>
   );
 }

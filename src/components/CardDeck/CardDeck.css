@@ -1,0 +1,27 @@
+.card {
+    display: flex;
+    height: 95px;
+    width: auto;
+    border-radius: 11.5px;
+    box-shadow: -0.75rem 0 1.5rem #0000005f;
+    margin-right: -10px;
+    transition: 0.3s;
+}
+
+.card-deck {
+    display: flex;
+    padding: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:hover~.card {
+    transform: translateX(1rem);
+}
+
+.card:not(:first-child) {
+    margin-left: -10px;
+}
+
